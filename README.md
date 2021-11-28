@@ -4,6 +4,8 @@
 
 This is a CDC/DFU/UF2 bootloader for nRF52 boards.
 
+This bootloader has been modified for use with [Umbelt](https://github.com/cygann/umbelt-hw). For Umbelt, use the `feather_nrf52840_sense` target.
+
 - [Adafruit CLUE](https://www.adafruit.com/product/4500)
 - [Adafruit Circuit Playground Bluefruit](https://www.adafruit.com/product/4333)
 - [Adafruit Feather nRF52832](https://www.adafruit.com/product/3406)
