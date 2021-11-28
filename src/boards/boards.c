@@ -125,6 +125,25 @@ void board_init(void)
   SysTick_Config(SystemCoreClock/1000);
 }
 
+/* Umbelt-specific configuration of enable pins to pull down */
+#define NUMBER_OF_UMBELT_EN_PINS 13
+const char umbelt_en_pins[] = { 43, 45, 47, 31, 30, 28, 46,
+                                36, 38, 39, 37, 35, 33 };
+void umbelt_gpio_en_cfg_default(void)
+/* Configures all motor driver enable lines to pull down. */
+{
+  for (int i = 0; i < NUMBER_OF_UMBELT_EN_PINS; i++)
+  {
+    char pin = umbelt_en_pins[i];
+    nrf_gpio_cfg(pin,
+                 NRF_GPIO_PIN_DIR_INPUT,
+                 NRF_GPIO_PIN_INPUT_CONNECT,
+                 NRF_GPIO_PIN_PULLDOWN,
+                 NRF_GPIO_PIN_S0S1,
+                 NRF_GPIO_PIN_NOSENSE);
+  }
+}
+
 void board_teardown(void)
 {
   // Disable systick, turn off LEDs

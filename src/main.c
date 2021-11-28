@@ -168,6 +168,9 @@ int main(void)
   // Note: skip it for now since this will prevent us to change the size of bootloader in the future
   // bootloader_mbr_addrs_populate();
 
+  // Keep umbelt enable lines pulled down
+  umbelt_gpio_en_cfg_default();
+
   // Save bootloader version to pre-defined register, retrieved by application
   // TODO move to CF2
   BOOTLOADER_VERSION_REGISTER = (MK_BOOTLOADER_VERSION);
@@ -196,6 +199,9 @@ int main(void)
 
   // Reset peripherals
   board_teardown();
+
+  // Keep umbelt enable lines pulled down after gpio reset in teardown
+  umbelt_gpio_en_cfg_default();
 
   /* Jump to application if valid
    * "Master Boot Record and SoftDevice initializaton procedure"

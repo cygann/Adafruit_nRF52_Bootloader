@@ -77,6 +77,7 @@
 
 void board_init(void);
 void board_teardown(void);
+void umbelt_gpio_en_cfg_default(void);
 
 //--------------------------------------------------------------------+
 // LED
