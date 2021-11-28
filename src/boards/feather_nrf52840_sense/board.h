@@ -30,28 +30,26 @@
 /*------------------------------------------------------------------*/
 /* LED
  *------------------------------------------------------------------*/
-#define LEDS_NUMBER           2
-#define LED_PRIMARY_PIN       _PINNUM(1, 9)
-#define LED_SECONDARY_PIN     _PINNUM(1, 10)
+#define LEDS_NUMBER           1
+#define LED_PRIMARY_PIN       _PINNUM(0, 9)
 #define LED_STATE_ON          1
 
-#define LED_NEOPIXEL           _PINNUM(0, 16)
-#define NEOPIXELS_NUMBER      1
+#define NEOPIXELS_NUMBER      0
 #define BOARD_RGB_BRIGHTNESS  0x040404
 
 /*------------------------------------------------------------------*/
 /* BUTTON
  *------------------------------------------------------------------*/
 #define BUTTONS_NUMBER        2
-#define BUTTON_1              _PINNUM(1, 02)
-#define BUTTON_2              _PINNUM(0, 10)
+#define BUTTON_1              _PINNUM(0, 24)
+#define BUTTON_2              _PINNUM(0, 25)
 #define BUTTON_PULL           NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
 // BLE OTA
 //--------------------------------------------------------------------+
-#define BLEDIS_MANUFACTURER   "Adafruit Industries"
-#define BLEDIS_MODEL          "Feather nRF52840 Sense"
+#define BLEDIS_MANUFACTURER   "Umbelt Industries"
+#define BLEDIS_MODEL          "Umbelt Board"
 
 //--------------------------------------------------------------------+
 // USB
@@ -61,9 +59,9 @@
 #define USB_DESC_CDC_ONLY_PID  0x0088
 
 //------------- UF2 -------------//
-#define UF2_PRODUCT_NAME      "Adafruit Feather nRF52840 Sense"
+#define UF2_PRODUCT_NAME      "Umbelt Board"
 #define UF2_VOLUME_LABEL      "FTHRSNSBOOT"
-#define UF2_BOARD_ID          "nRF52840-Feather-Sense"
-#define UF2_INDEX_URL         "https://www.adafruit.com/product/4516"
+#define UF2_BOARD_ID          "umbelt-board"
+#define UF2_INDEX_URL         "https://github.com/cygann/humbelt-hw"
 
 #endif // _FEATHER_NRF52840_SENSE_H
